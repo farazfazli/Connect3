@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Connect 3</string>
+    <string name="random">Start Random!</string>
+    <string name="title">Connect 3</string>
+    <string name="red">Red\nFirst!</string>
+    <string name="yellow">Yellow First!</string>
+    <string name="author">Made by Faraz</string>
+</resources>

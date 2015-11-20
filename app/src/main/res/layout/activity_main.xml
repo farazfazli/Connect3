@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+                android:background="#77d3fe">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:background="@drawable/board"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/gridLayout"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="0" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="1" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="2"
+            />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="3"   />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView5"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="4" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView6"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="5"
+            />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView7"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="6" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView8"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="7"   />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView9"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:onClick="gamePieceDropIn"
+            android:tag="8"
+            />
+
+        <TextView
+            android:layout_width="106dp"
+            android:layout_height="42dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/stats"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/subheading"
+            android:layout_alignStart="@+id/subheading"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/startLayout"
+        android:visibility="invisible">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Random!"
+            android:id="@+id/random"
+            android:background="#fb00ff"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="146dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Connect 3"
+            android:id="@+id/title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="81dp"
+            android:textSize="50dp"
+            android:textColor="#a8ff0008"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red\nFirst!"
+            android:id="@+id/red"
+            android:layout_marginTop="73dp"
+            android:background="#ff0000"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/random"
+            android:layout_toLeftOf="@+id/random"
+            android:padding="10dp" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow First!"
+            android:id="@+id/yellow"
+            android:background="#d9c42c"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/red"
+            android:layout_toRightOf="@+id/random"
+            android:layout_toEndOf="@+id/random"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Made by Faraz"
+            android:id="@+id/subheading"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:textColor="#ff0000"/>
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sound"
+            android:id="@+id/sounds"
+            android:layout_alignBottom="@+id/yellow" android:layout_centerHorizontal="true"
+            android:enabled="true" android:checked="true"
+            android:layout_alignTop="@+id/red" android:textOn="Sounds"
+            android:textOff="Sounds"/>
+
+    </RelativeLayout>
+</RelativeLayout>
