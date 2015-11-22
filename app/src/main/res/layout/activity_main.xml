@@ -17,7 +17,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:id="@+id/gridLayout"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <ImageView
             android:layout_width="90dp"
